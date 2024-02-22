@@ -11,7 +11,7 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">GREENDEN</h1>
         <!--menu icon from hero app-->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
           </svg>
           
@@ -27,9 +27,28 @@
             </li>
         </ul>
     </nav>
-    <section class="text-center">
-        <input type="text" class="border border-black m-5  p-3 " placeholder="Search for a product" style="width:80%;">
-        <div class="grid grid-cols-2 gap-4 mt-5 md:grid-cols-4">
+    <!---side navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width:50%;height:100vh;right:-50%;">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col items-center gap-10 text-gray-600">
+            <li>
+                <a href="index.html" class="hover:underline text-black">Home</a>
+            </li>
+            <!--linking product page-->
+            <li>
+                <a href="product.html" class="hover:underline text-black">Produts</a>
+            </li>
+            <!--linking contact page-->
+            <li>
+                <a href="contact.html" class="hover:underline text-black">contact</a>
+            </li>
+
+    </section>
+    <section class="p-4 text-center">
+        <input id="search" type="text" class="border border-black m-5  p-3 " placeholder="Search for a product" style="width:80%;">
+        <div id="product-container" class="grid grid-cols-2 gap-4 mt-5 md:grid-cols-4">
             <div>
                 <img src="images/best_seller1.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <p>Rose Plant</p>
@@ -62,7 +81,7 @@
             </div>
             <div>
                 <img src="images/best-seller2.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>snake Plant</p>
+                <p>lilly Plant</p>
                 <p>$20</p>
             </div>
             <div>
@@ -78,5 +97,7 @@
         <p>The standard of lorem ipsum used since the 1500 s is reproduced below for those interest</p>
         <p>@ 2021 Greenday.com</p>
     </section>
+
+    <script src="product.js"></script>
 </body>
 </html>
